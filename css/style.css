@@ -7,14 +7,28 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-green-700: oklch(52.7% 0.154 150.069);
-    --color-blue-700: oklch(48.8% 0.243 264.376);
-    --text-5xl: 3rem;
-    --text-5xl--line-height: 1;
-    --font-weight-bold: 700;
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-amber-700: oklch(55.5% 0.163 48.998);
+    --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-green-600: oklch(62.7% 0.194 149.214);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-pink-400: oklch(71.8% 0.202 349.761);
+    --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --font-weight-extrabold: 800;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-heading: red;
   }
 }
 @layer base {
@@ -163,6 +177,27 @@
   }
 }
 @layer utilities {
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 87.25rem) {
+      max-width: 87.25rem;
+    }
+  }
+  .container {
+    margin-inline: auto;
+  }
   .table {
     display: table;
   }
@@ -172,23 +207,24 @@
   .resize {
     resize: both;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  .bg-gray-300 {
+    background-color: var(--color-gray-300);
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
+  .bg-slate-50 {
+    background-color: var(--color-slate-50);
   }
-  .text-blue-700 {
-    color: var(--color-blue-700);
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
   }
-  .text-green-700 {
-    color: var(--color-green-700);
+  .text-slate-900 {
+    color: var(--color-slate-900);
   }
   .underline {
     text-decoration-line: underline;
@@ -197,27 +233,110 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .dark\:bg-black {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-black);
+    }
+  }
+  .dark\:bg-slate-700 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-slate-700);
+    }
+  }
+  .dark\:text-white {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+  }
+}
+@layer base {
+  p {
+    font-size: 23px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 24px;
+    --tw-leading: 1.4;
+    line-height: 1.4;
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-heading);
+  }
+  h1 {
+    font-size: 50px;
+  }
+  button {
+    background: blue;
+  }
+}
+@layer components {
+  .ami {
+    &::after {
+      content: var(--tw-content);
+      position: absolute;
+    }
+    &::after {
+      content: var(--tw-content);
+      top: calc(var(--spacing) * 0);
+    }
+    &::after {
+      content: var(--tw-content);
+      z-index: 20;
+    }
+    &::after {
+      content: var(--tw-content);
+      height: calc(var(--spacing) * 10);
+    }
+    &::after {
+      content: var(--tw-content);
+      width: calc(var(--spacing) * 10);
+    }
+    &::after {
+      content: var(--tw-content);
+      background-color: var(--color-amber-700);
+    }
+    &::after {
+      content: var(--tw-content);
+      contain: '';
+    }
+  }
+}
+@layer utilities {
+  .gap-2 {
+    gap: 90px;
+  }
 }
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-font-weight: initial;
       --tw-outline-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-content: "";
     }
   }
 }

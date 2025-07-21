@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+
+
+@layer base {
+    p {
+        font-size: 23px;
+        font-weight: 500;
+    }
+    h3 {
+        @apply text-[24px] text-heading leading-[1.4] font-extrabold
+    }
+    h1 {
+        font-size: 50px;
+    }
+
+    button {
+        background: blue;
+    }
+}
+
+@layer components {
+    .ami {
+          @apply after:contain-[''] after:w-10 after:h-10 after:bg-amber-700 after:absolute after:top-0 after:z-20;  
+    }
+}
+@layer utilities {
+    .gap-2 {
+         gap: 90px;
+    }
+}
+
+/* @layer  */
+
+@theme {
+  --color-primary: #6366F1;
+  --color-heading: red;
+  --color-paragraph: #565973;
+
+  /* Breakpoints */
+--breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 87.25rem;
+}
+@utility container {
+  margin-inline: auto;
+}
+
+
+

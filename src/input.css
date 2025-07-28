@@ -10,7 +10,7 @@
         @apply text-base leading-[1.6] font-normal text-gray-7;
     }
     h3 {
-        @apply text-[24px] text-heading leading-[1.4] font-extrabold;
+        @apply text-[24px] text-gray-9 leading-[1.4] font-extrabold;
     }
     h4 {
         @apply text-[24px] leading-[1.4] font-extrabold text-gray-9;
@@ -35,11 +35,7 @@
           @apply bg-primary py-2 px-3 text-white rounded-[4px] cursor-pointer;  
     }
 }
-@layer utilities {
-    .gap-2 {
-         gap: 90px;
-    }
-}
+
 
 /* @layer  */
 
@@ -56,6 +52,7 @@
   --color-gray-7: #565973;
   --color-gray-8: #9397AD;
   --color-gray-9: #0B0F19;
+  --color-border: #D4D7E5;
 
   /* Breakpoints */
 --breakpoint-*: initial;

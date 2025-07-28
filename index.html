@@ -239,6 +239,72 @@
     </section>
 
 
-    <!--  -->
+    <!-- Get in Touch -->
+     <section class="mt-[112px]">
+      <div class="container">
+        <div class="grid grid-cols-2 bg-gray-1 py-[72px] px-[110px]">
+          <div>
+            <h2>Get in Touch</h3>
+            <p>Have a project in mind? To request a quote contact us directly or fill out the form and let us know how we can help.</p>
+            <h3>Contact Info</h3>
+
+            <ul class="flex flex-col gap-3 pt-6">
+              <li class="flex items-center gap-2">
+                <span>
+                  <img src="./images/icons/bx-phone-call.png" alt="">
+                </span>
+                <span class="text-gray-8">(406) 555-0120</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span>
+                  <img src="./images/icons/bx-phone-call.png" alt="">
+                </span>
+                <span class="text-gray-8">(406) 555-0120</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span>
+                  <img src="./images/icons/bx-phone-call.png" alt="">
+                </span>
+                <span class="text-gray-8">(406) 555-0120</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <form class="bg-white shadow-1 p-8 rounded-[6px] flex flex-col gap-4" action="">
+              <div class="flex flex-col gap-1">
+                <label for="sevice">Sevice</label>
+                 <select id="underline_select" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+      <option selected>Choose a country</option>
+      <option value="US">United States</option>
+      <option value="CA">Canada</option>
+      <option value="FR">France</option>
+      <option value="DE">Germany</option>
+  </select>
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="sevice">Sevice</label>
+                <input readonly class="py-[13px] px-4 bg-transparent border border-border focus:outline-primary" type="text" id="sevice" placeholder="Choose the service you are interested in" value="human">
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="sevice">Sevice</label>
+                <input class="py-[13px] px-4 bg-transparent border border-border focus:outline-primary" type="text" id="sevice" placeholder="Choose the service you are interested in">
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="message">Message</label>
+                <textarea class="py-[13px] px-4 bg-transparent border border-border  focus:outline-primary" type="text" id="message" placeholder="Tell us about your project">
+                </textarea>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <input type="checkbox" id="Terms">
+                <label for="Terms">I agree to the <a href="#" class="text-primary cursor-pointer">Terms</a> & <a href="#" class="text-primary cursor-pointer">Conditions</a>.</label>
+              </div>
+
+              <button disabled type="submit" class="common_btn max-w-[162px] h-[52px]">Send Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+     </section>
   </body>
 </html>
